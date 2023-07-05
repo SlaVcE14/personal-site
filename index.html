@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slavcho Josheski</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="logo.css">
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+
+</head>
+<body>
+<div id="nav">
+    <div id="logo1">
+        <div id="logo">
+            <div class="l1"></div>
+            <div class="l2"></div>
+            <div class="l3"></div>
+            <div class="l4"></div>
+            <div class="l5"></div>
+            <div class="l6"></div>
+            <div class="l7"></div>
+            <div class="l8"></div>
+
+        </div>
+    </div>
+    <img src="img/logo.png">
+    <div id="nav_btn" onclick="showNav()">
+
+    </div>
+    <ul id="nav_ul">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contacts">Contact</a></li>
+
+    </ul>
+
+
+
+</div>
+<div id="main">
+
+
+    <div id="msg_dialog">
+        <div class="corner">
+            <div>
+                <p id="msg_txt">{Message}</p>
+            </div>
+
+            <a onclick="hideDialog()">OK</a>
+        </div>
+
+    </div>
+
+    <div id="home" class="section">
+        <h1>Slavcho Josheski</h1>
+        <h3>Student at FCSE</h3>
+
+    </div>
+    <div id="education" class="section">
+        <h2>Education</h2>
+        <div id="edu_container">
+            <a class="corner" href="https://todehtefov.edu.mk" target="_blank">
+                <div>
+                    <h3>ООУ "Тоде Хаџи-Тефов"</h3>
+                    <h4>Elementary school</h4>
+                </div>
+            </a>
+            <a class="corner" href="https://souksb.mk" target="_blank">
+                <div>
+                    <h3>СОУ "Ќиро Спанџов Брко"</h3>
+                    <h4>High school</h4>
+                </div>
+            </a>
+            <a class="corner" href="https://finki.ukim.mk" target="_blank">
+                <div>
+                    <h3>Faculty of Computer Science & Engineering</h3>
+                    <h4>Faculty</h4>
+                </div>
+            </a>
+
+        </div>
+    </div>
+    <div id="skills" class="section">
+        <h2>Skills</h2>
+        <div id="skills_container">
+            <div>
+                <img src="img/icons/java.png"/>
+                Java
+            </div>
+            <div>
+                <img src="img/icons/c%23.png"/>
+                C#
+            </div>
+            <div>
+                <img src="img/icons/html.svg"/>
+                HTML
+            </div>
+            <div>
+                <img src="img/icons/css.png"/>
+                CSS
+            </div>
+            <div>
+                <img src="img/icons/js.png"/>
+                JavaScript
+            </div>
+            <div>
+                <img src="img/icons/Android_Studio.png"/>
+                Android Studio
+            </div>
+            <div>
+                <img src="img/icons/unity.png"/>
+                Unity
+            </div>
+            <div>
+                <img src="img/icons/Arduino.png"/>
+                Arduino
+            </div>
+        </div>
+    </div>
+    <div id="projects" class="section">
+        <h2>Projects</h2>
+        <div id="projects_container">
+            <a href="https://github.com/SlaVcE14/SJ-Dialog" target="_blank">
+                <div class="corner">
+                    <img class="corner-top" src="https://repository-images.githubusercontent.com/473367072/2dbc4ac2-711c-48e5-92f4-c55e083e81ac" title="JS-Dialog"/>
+                    <h3>SJ-Dialog</h3>
+                    <h4>Android library</h4>
+                </div>
+            </a>
+
+            <a>
+                <div class="corner private-repo">
+                    <img class="corner-top" src="img/projects/weather.png" title="Weather"/>
+                    <h3>Weather</h3>
+                    <h4>Android App</h4>
+                </div>
+            </a>
+            <a href="https://github.com/SlaVcE14/JsonList" target="_blank">
+                <div class="corner">
+                    <img class="corner-top" src="img/projects/jsonlist.png" title="Json List"/>
+                    <h3>Json List</h3>
+                    <h4>Android App</h4>
+                </div>
+            </a>
+            <a onclick="privateRepo()">
+                <div class="corner private-repo">
+                    <img class="corner-top" src="img/projects/pm.png" title="Password manager"/>
+                    <h3>Password manager</h3>
+                    <h4>Android App</h4>
+                </div>
+            </a>
+
+
+
+
+        </div>
+
+    </div>
+    <div id="contacts" class="section">
+        <h2>Contacts</h2>
+        <div id="contact_container" class="corner">
+            <a href="https://github.com/SlaVcE14" target="_blank">
+                <img src="img/icons/github2.png">
+            </a>
+            <a href="https://twitter.com/SlaVcE514" target="_blank">
+                <img src="img/icons/twitter.png">
+            </a>
+            <a href="https://www.linkedin.com/in/slavce-joseski/" target="_blank">
+                <img src="img/icons/linkedIn.png">
+            </a>
+            <a id="mail" href="mailto: slavceejoseski@gmail.com">
+                <img src="img/icons/mail.png">
+                <p>slavceejoseski@gmail.com</p>
+            </a>
+        </div>
+    </div>
+
+    <div id="copy">
+        &copy; 2023 Slavcho Josheski
+    </div>
+
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
