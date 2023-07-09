@@ -11,6 +11,12 @@ let isNavOpen = false;
 
 
 window.onscroll = () => {
+
+    document.body.style.setProperty(
+        "--scroll",
+        (window.scrollY /   window.innerHeight).toString()
+    );
+
     sections.forEach(i => {
         let top = window.scrollY;
         let offset = i.offsetTop - 150;

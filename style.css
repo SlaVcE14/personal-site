@@ -2,6 +2,7 @@
     --nav-bg-color : #0064ff;
     --gray-color: #151515;// #232323;
     --gray-color2: #252525;
+    --scroll: 0;
 
 }
 @font-face {
@@ -31,8 +32,16 @@ html, body {
 body {
     display: flex;
     flex-flow: column;
-    background: url("img/bg.jpg") , black;
+    background: url("img/bg.jpg") center, black;
     background-size: 100% auto;
+
+
+    animation: scale 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
 }
 
 #nav {
@@ -210,9 +219,26 @@ body {
     color: #cfcfcf;
 }
 
+#home div {
+    animation: home-scale 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1.5s);
+}
+
 #education, #skills, #projects {
     flex-flow: column;
     min-height: 50vh;
+
+
+}
+.section:not(#home) div,.section:not(#home) h2 {
+    opacity: 1;
+    animation: c-scale 1s ease-in-out infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1.5s);
+
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
 }
 
 #edu_container{
@@ -461,6 +487,34 @@ body {
     border-top-right-radius: 20px;
 }
 
+@keyframes scale {
+    from {
+        background-size: 140% auto;
+    }
+    to {
+        background-size: 100% auto;
+    }
+}
+@keyframes c-scale {
+    from {
+        scale: 90%;
+        opacity: 0;
+    }
+    to {
+        scale: 100%;
+        opacity: 1;
+    }
+}
+@keyframes home-scale {
+    from {
+        scale: 100%;
+        opacity: 1;
+    }
+    to {
+        scale: 70%;
+        opacity: 0;
+    }
+}
 @keyframes nav-item {
     0%, 85% {
         opacity: 0;
