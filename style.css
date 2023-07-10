@@ -35,8 +35,25 @@ body {
     background: url("img/bg.jpg") center, black;
     background-size: 100% auto;
 
-
     animation: scale 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+body:after {
+    content: "";
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 90%,rgba(0,0,0,1) 100%);
+    border-radius: 0;
+    top: 0; left: 0;
+    z-index: -3;
+
+    animation: bg-v 1s linear infinite;
     animation-play-state: paused;
     animation-delay: calc(var(--scroll) * -1s);
 
@@ -219,6 +236,7 @@ body {
     color: #cfcfcf;
 }
 
+
 #home div {
     animation: home-scale 1s linear infinite;
     animation-play-state: paused;
@@ -231,9 +249,9 @@ body {
 
 
 }
-.section:not(#home) div,.section:not(#home) h2 {
+.section:not(#home) > div,.section:not(#home) >h2 {
     opacity: 1;
-    animation: c-scale 1s ease-in-out infinite;
+    animation: c-animate 1s linear infinite;
     animation-play-state: paused;
     animation-delay: calc(var(--scroll) * -1.5s);
 
@@ -458,6 +476,9 @@ body {
     }
 }
 @media only screen and (max-device-width: 480px){
+    #home div {
+        transform: translateY(-10vh);
+    }
     .section {
         min-width: 280px;
     }
@@ -495,14 +516,23 @@ body {
         background-size: 100% auto;
     }
 }
-@keyframes c-scale {
+@keyframes c-animate {
     from {
-        scale: 90%;
+        transform: translateY(200px);
         opacity: 0;
     }
     to {
-        scale: 100%;
+        transform: translateY(0px);
         opacity: 1;
+    }
+}
+
+@keyframes bg-v {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
     }
 }
 @keyframes home-scale {

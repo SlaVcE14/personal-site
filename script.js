@@ -14,7 +14,7 @@ window.onscroll = () => {
 
     document.body.style.setProperty(
         "--scroll",
-        (window.scrollY /   window.innerHeight).toString()
+        (window.scrollY / window.innerHeight).toString()
     );
 
     sections.forEach(i => {
