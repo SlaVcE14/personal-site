@@ -15,7 +15,7 @@
 }
 a {
     text-decoration: none;
-    color: white;
+    color: #cfcfcf;
 }
 
 html, body {
@@ -498,6 +498,19 @@ body:after {
     #mail:hover {
         scale: 1;
     }
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background: #dfdfdf;
+    color: black;
+    border-radius: 20px;
+    margin: 0 20px;
+}
+.info a {
+    color: var(--nav-bg-color);
 }
 
 .corner {
